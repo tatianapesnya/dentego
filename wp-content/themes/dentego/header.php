@@ -34,7 +34,10 @@
     <header id="masthead" class="site-header" role="banner">
         <hgroup>
             <h1><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
-                 <img src="<?php bloginfo('template_url'); ?>/images/logo.png" alt="<?php bloginfo('name'); ?>"/> </a></h1>
+                 <img src="<?php bloginfo('template_url'); ?>/images/logo.png" alt="<?php bloginfo('name'); ?>"/> 
+             </a></h1>
+             <h2 class="site-description"><?php bloginfo( 'description' ); ?></h2>
+             <h3>Dentego - 60 rue laugier - 75 017 PARIS  / 06 35 59 60 17</h3>
         </hgroup>  
     </header><!-- #masthead --> 
 </div><!--#page-->
@@ -45,5 +48,4 @@
             <?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_class' => 'nav-menu' ) ); ?>
         </nav><!-- #site-navigation -->
 <div id="page" class="hfeed site">
-
     <div id="main" class="wrapper">
