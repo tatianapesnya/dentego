@@ -537,7 +537,6 @@ a:hover {
 .site {
 	padding: 0 24px;
 	padding: 0 1.714285714rem;
-	background-color: #fff;
 }
 .site-content {
 	margin: 24px 0 0;
@@ -1608,7 +1607,7 @@ img#wpstats {
 /* Minimum width of 960 pixels. */
 @media screen and (min-width: 960px) {
 	body {
-		background-color: #fff;
+		background-color: #ececec;
 	}
 	body .site {
 		padding: 0 40px;
@@ -1792,9 +1791,74 @@ img#wpstats {
 ul#traitement li{
 	float: left;
 	display: inline-block;
-	width: 50%;
+	width: 30.8%;
 	background-color: #fff;
+	height: 124px;
 }
-li.traitements{
-
+ul#traitement li p{
+	color: #06102d;
+	font-size: 1.214285;
+}
+ul#traitement li h2{
+	color: #243e61;
+	font-family: "BrownBold";
+	font-size: 1.2857;
+	text-transform: uppercase;
+	margin-bottom: 13px;
+}
+li.traitements
+	{
+	margin: 45px 36px 26px 27px;
+	position: relative;
+	padding: 15px 15px 15px 87px;
+}
+li.quality
+	{
+	margin: 45px 0px 26px 0px;
+	padding: 15px 15px 15px 87px;
+	position: relative;
+}
+span.traitements{
+	background: url('images/traitement.png') scroll 0 0;
+	background-repeat: no-repeat;
+	display: inline-block;
+	height: 111px;
+	width: 96px;
+	position: absolute;
+	top: -15px;
+	left: -25px;
+}
+li.quality{
+	margin: 45px 67px 26px 27px;
+	position: relative;
+}
+span.quality{
+	background: url('images/quality.png') scroll 0 0;
+	background-repeat: no-repeat;
+	display: inline-block;
+	height: 111px;
+	width: 96px;
+	position: absolute;
+	top: -15px;
+	left: -25px;
+}
+span.ajournement{
+	background: url('images/ajournement.png') scroll 0 0;
+	background-repeat: no-repeat;
+	display: inline-block;
+	height: 111px;
+	width: 96px;
+	position: absolute;
+	top: -15px;
+	left: -25px;
+}
+span.quality{
+	background: url('images/quality.png') scroll 0 0;
+	background-repeat: no-repeat;
+	display: inline-block;
+	height: 111px;
+	width: 96px;
+	position: absolute;
+	top: -15px;
+	left: -25px;
 }

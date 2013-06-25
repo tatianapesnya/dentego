@@ -22,15 +22,19 @@ get_header(); ?>
 			</div>
 			<ul id="traitement">
 				<li class="traitements">
+					<span class="traitements"></span>
 					<?php the_field('traitements');?>
 				</li>
 				<li class="quality">
+					<span class="quality"></span>
 					<?php the_field('quality');?>
 				</li>
 				<li class="ajournement">
+					<span class="ajournement"></span>
 					<?php the_field('ajournement');?>
 				</li>
 				<li class="urgence">
+					<span class="urgence"></span>
 					<?php the_field('urgence');?>
 				</li>
 			</ul>
