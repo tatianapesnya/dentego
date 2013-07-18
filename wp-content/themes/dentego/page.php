@@ -1,4 +1,3 @@
-
 <?php
 /**
  * The template for displaying all pages.
@@ -8,45 +7,21 @@
  * and that other 'pages' on your WordPress site will use a
  * different template.
  *
- * @package Dentego
+ * @package WordPress
+ * @subpackage Twenty_Twelve
+ * @since Twenty Twelve 1.0
  */
 
 get_header(); ?>
-<?php if(is_page(2)){?>
-		<div id="accueil">
-			<div class="video">
-				<img src="<?php bloginfo('template_url'); ?>/images/video.jpg" />
-			</div>
-			<div class="description">
-				<?php the_field('description');?>
-			</div>
-			<ul id="traitement">
-				<li class="traitements">
-					<span class="traitements"></span>
-					<?php the_field('traitements');?>
-				</li>
-				<li class="quality">
-					<span class="quality"></span>
-					<?php the_field('quality');?>
-				</li>
-				<li class="ajournement">
-					<span class="ajournement"></span>
-					<?php the_field('ajournement');?>
-				</li>
-				<li class="urgence">
-					<span class="urgence"></span>
-					<?php the_field('urgence');?>
-				</li>
-			</ul>
-		</div>
-			<?php}else{?>
 	<div id="primary" class="site-content">
 		<div id="content" role="main">
+
 			<?php while ( have_posts() ) : the_post(); ?>
 				<?php get_template_part( 'content', 'page' ); ?>
-			<?php endwhile; // end of the loop. ?>
 
-		<?php }?>
+			<?php endwhile; // end of the loop. ?>
 		</div><!-- #content -->
 	</div><!-- #primary -->
+
+<?php get_sidebar(); ?>
 <?php get_footer(); ?>

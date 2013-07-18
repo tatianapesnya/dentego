@@ -34,7 +34,7 @@ function twentytwelve_setup() {
 
 	// This theme uses a custom image size for featured images, displayed on "standard" posts.
 	add_theme_support( 'post-thumbnails' );
-	set_post_thumbnail_size( 800, 9999 ); // Unlimited height, soft crop
+	set_post_thumbnail_size( 609, 9999 ); // Unlimited height, soft crop
 }
 add_action( 'after_setup_theme', 'twentytwelve_setup' );
 /**
@@ -262,27 +262,9 @@ function twentytwelve_entry_meta() {
 		esc_html( get_the_date() )
 	);
 
-	$author = sprintf( '<span class="author vcard"><a class="url fn n" href="%1$s" title="%2$s" rel="author">%3$s</a></span>',
-		esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ),
-		esc_attr( sprintf( __( 'View all posts by %s', 'twentytwelve' ), get_the_author() ) ),
-		get_the_author()
-	);
-
-	// Translators: 1 is category, 2 is tag, 3 is the date and 4 is the author's name.
-	if ( $tag_list ) {
-		$utility_text = __( '%3$s<span class="by-author"> by %4$s</span>', 'twentytwelve' );
-	} elseif ( $categories_list ) {
-		$utility_text = __( '%3$s<span class="by-author"> by %4$s</span>', 'twentytwelve' );
-	} else {
-		$utility_text = __( '%3$s<span class="by-author"> by %4$s</span>', 'twentytwelve' );
-	}
 
 	printf(
-		$utility_text,
-		$categories_list,
-		$tag_list,
-		$date,
-		$author
+		$date
 	);
 }
 endif;
@@ -304,9 +286,7 @@ add_action( 'template_redirect', 'twentytwelve_content_width' );
  *
  * @since Twenty Twelve 1.0
  */
-function twentytwelve_customize_preview_js() {
-	wp_enqueue_script( 'twentytwelve-customizer', get_template_directory_uri() . '/js/theme-customizer.js', array( 'customize-preview' ), '20120827', true );
-}
+
 add_action( 'customize_preview_init', 'twentytwelve_customize_preview_js' );
 
 function register_js()  
